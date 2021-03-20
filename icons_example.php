@@ -17,6 +17,7 @@ use App\Icons;
         .icon-group {
             position: relative;
             font-size: 14px;
+            margin: 5px;
         }
 
         .base {
@@ -73,9 +74,14 @@ use App\Icons;
                 </div>
                 <div class="card-body">
                     <?php
-                    echo (new Icons)
+                    $icon = new Icons;
+                    echo $icon
                         ->base("fas fa-address-book")
                         ->bottom_left("fas fa-plus")
+                        ->get();
+                    
+                        echo $icon
+                        ->bottom_left("fas fa-minus")
                         ->get();
                     ?>
                 </div>
